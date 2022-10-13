@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="table">
+        <thead>
+
+            <tr>
+
+                <th scope="col">#</th>
+                <th scope="col">GUEST NAME</th>
+                <th scope="col">GUEST FAMILLY MEMBERSE NAME</th>
+                <th scope="col">TOTAL GUEST MEMBERSE</th>
+                <th scope="col">ADDRESS</th>
+                <th scope="col">CHECKIN DATE TIME</th>
+                <th scope="col">CHECKOUT DATE TIME</th>
+                <th scope="col">EMAILID</th>
+                <th scope="col">STATUS</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of user">
+                <td>{{item.id}}</td>
+                <td>{{item.guestName}}</td>
+                <td>{{item.familyMemberName}}</td>
+                <td>{{item.totalGuestAttending}}</td>
+                <td>{{item.address}}</td>
+                <td>{{item.checkinDate}}</td>
+                <td>{{item.checkoutDate}}</td>
+                <td>{{item.emailId}}</td>
+                <td>{{item.status}}</td>
+            </tr>
+        </tbody>
+
+    </div>
+</div>
