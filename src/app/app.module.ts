@@ -7,11 +7,13 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import {HttpClientModule} from "@angular/common/http"
 import { ReactiveFormsModule } from '@angular/forms';
+import { RsvpformComponent } from './rsvpform/rsvpform.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    RsvpformComponent
   ],
   imports: [
     BrowserModule,

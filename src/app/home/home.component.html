@@ -6,7 +6,9 @@
 
                 <th scope="col">#</th>
                 <th scope="col">GUEST NAME</th>
+                <th scope="col">GUEST GENDER</th>
                 <th scope="col">GUEST FAMILLY MEMBERSE NAME</th>
+                <th scope="col">GUEST FAMILLY MEMBERSE GENDER</th>
                 <th scope="col">TOTAL GUEST MEMBERSE</th>
                 <th scope="col">ADDRESS</th>
                 <th scope="col">CHECKIN DATE TIME</th>
@@ -20,13 +22,22 @@
             <tr *ngFor="let item of user">
                 <td>{{item.id}}</td>
                 <td>{{item.guestName}}</td>
+                <td>{{item.guestGender}}</td>
                 <td>{{item.familyMemberName}}</td>
+                <td>{{item.familyMemberGender}}</td>
                 <td>{{item.totalGuestAttending}}</td>
                 <td>{{item.address}}</td>
-                <td>{{item.checkinDate}}</td>
-                <td>{{item.checkoutDate}}</td>
+                <td>{{item.checkinDateTime}}</td>
+                <td>{{item.checkoutDateTime}}</td>
                 <td>{{item.emailId}}</td>
-                <td>{{item.status}}</td>
+                <td *ngIf="item.status==true;else elseBlock">
+                    <button class="btn btn-primary">Yes</button>
+                </td>
+                <ng-template #elseBlock>
+                    <td *ngIf="item.status==false">
+                        <button class="btn btn-danger">No</button>
+                    </td>
+                </ng-template>
             </tr>
         </tbody>
 
